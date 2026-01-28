@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejidos Luna - Generador de Patrones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Tejidos Luna</header>
+
+    <div class="container">
+        <h2>Sube tu imagen y genera un patrón</h2>
+        <input type="file" id="imageInput" accept="image/*">
+        <img id="preview" alt="Previsualización de la imagen">
+        <div class="controls">
+            <label for="gridSize">Tamaño de Cuadrícula:</label>
+            <select id="gridSize">
+                <option value="10">10x10</option>
+                <option value="20">20x20</option>
+                <option value="50">50x50</option>
+                <option value="100">100x100</option>
+            </select>
+            <label for="colorMode">Modo de Color:</label>
+            <select id="colorMode">
+                <option value="bw">Blanco y Negro</option>
+                <option value="color">Colores Originales</option>
+            </select>
+            <label for="showNumbers">Mostrar Numeración:</label>
+            <input type="checkbox" id="showNumbers" checked>
+            <label for="cellSize">Tamaño de Celda (px):</label>
+            <input type="number" id="cellSize" value="20" min="5" max="50">
+        </div>
+        <button id="generateBtn">Generar Patrón</button>
+        <div class="grid-container">
+            <canvas id="patternCanvas"></canvas>
+        </div>
+        <button id="downloadBtn" class="download-btn">Descargar Patrón PNG</button>
+
+        <div class="landing-text">
+            Crea tus patrones de tejido fácilmente. Comparte tus diseños y monetiza tu creatividad.
+        </div>
+
+        <div class="monetization">
+            <a href="https://www.paypal.com/paypalme/tuusuario" target="_blank">Pagar con PayPal</a>
+            <a href="https://www.buymeacoffee.com/tuusuario" target="_blank">Invítame un café</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
